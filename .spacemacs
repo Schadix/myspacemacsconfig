@@ -43,7 +43,11 @@ values."
              python-format-on-save t
              ;;python-sort-imports-on-save t
              python-test-runner 'pytest
-             backend 'lsp)
+             python-backend 'lsp
+             python-lsp-server 'mspyls
+             python-lsp-git-root "/Users/schadem/code/github/Microsoft/python-language-server"
+             python-auto-set-local-pyenv-version 'on-visit
+             )
      dap
      markdown
      lsp
@@ -53,7 +57,7 @@ values."
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
      helm
-     (auto-completion :variables auto-completion-enable-snippets-in-popup nil auto-completion-enable-help-tooltip t auto-completion-enable-sort-by-usage t)
+     (auto-completion :variables auto-completion-enable-snippets-in-popup nil auto-completion-enable-help-tooltip nil auto-completion-enable-sort-by-usage t)
      better-defaults
      emacs-lisp
      git
@@ -331,6 +335,14 @@ you should place your code here."
   (drag-stuff-mode t)
   (global-set-key (kbd "<C-S-up>") 'drag-stuff-up)
   (global-set-key (kbd "<C-S-down>") 'drag-stuff-down)
+  ;; (setq save-interprogram-paste-before-kill nil)
+  ;; (setq x-select-enable-clipboard nil)
+  ;; (global-set-key (kbd "C-y") 'x-clipboard-yank)
+  ;; (global-set-key (kbd "C-w") 'clipboard-kill-region)
+  ;; (global-set-key (kbd "M-w") 'clipboard-kill-ring-save)
+  ;; (global-set-key (kbd "s-y") 'yank)
+  ;; (setq x-select-enable-clipboard nil)
+  ;; (setq x-select-enable-primary nil)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
