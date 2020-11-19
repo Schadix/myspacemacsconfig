@@ -38,14 +38,14 @@ values."
      html
      yaml
      (python :variables
-             python-pipenv-activate t
+             ;; python-pipenv-activate t
              python-formatter 'yapf
              python-format-on-save t
              ;;python-sort-imports-on-save t
              python-test-runner 'pytest
              python-backend 'lsp
-             python-lsp-server 'mspyls
-             python-lsp-git-root "/Users/schadem/code/github/Microsoft/python-language-server"
+             python-lsp-server 'pyright
+             ;; python-lsp-git-root "/Users/lc1209949/code/github/Microsoft/python-language-server"
              python-auto-set-local-pyenv-version 'on-visit
              )
      dap
